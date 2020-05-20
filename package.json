@@ -1,0 +1,13 @@
+{
+  "name": "InviteManager",
+  "version": "0.0.2",
+  "description": "Death? There's a app for that!",
+  "main": "bot.js",
+  "author": "HaZZe",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.0"
+  }
+}

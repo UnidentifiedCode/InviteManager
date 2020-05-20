@@ -1,0 +1,2 @@
+node countdown.js
+pause
