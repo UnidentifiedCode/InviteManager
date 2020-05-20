@@ -27,7 +27,7 @@ client.on("message", async message => {
   if(command === "botinfo" || command === "info"){
     const botInfo = new RichEmbed()
 	.setAuthor(client.user.username + "info", client.user.avatarURL)
-	.setColor("#3CB371")
+	.setColor("#129C4F")
 	.addField("Version", `9.7.0`, true)
 	.addField("Uptime", `8 hours`, true)
 	.addField("Current Shard", `4 (4)`, true)
