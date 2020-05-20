@@ -29,15 +29,16 @@ client.on("message", async message => {
 	.setAuthor(client.user.username + "info", client.user.avatarURL)
 	.setColor("#000000")
 	.setThumbnail(client.user.displayAvatarURL)
-	.addField("👑 Developer", `HaZZe#0001`, true)
-	.addField("💎 Support Server", `Soon...`, true)
-	.addField("📤 Invite", `Soon...`, true)
-	.addField('👤 Total Users', `${client.users.size}`, true)
-	.addField('📁 Total Channels:', `${client.channels.size}`, true)
-	.addField('🛡 Total Servers', Math.ceil(client.guilds.size), true)
-	.addField('\u200b', `Built with discord.js`)
+	.addField("Version", `9.7.0`, true)
+	.addField("Uptime", `8 hours`, true)
+	.addField("Current Shard", `4 (4)`, true)
+	.addField('Premium', `This server currently **does not** have premium.`, false)
+	.addField('Support Discord', `https://discord.gg/Am6p2Hs[https://discord.gg/Am6p2Hs]`, false)
+	.addField('Add bot to your server', `https://invitemanager.com/add-bot/[https://invitemanager.com/add-bot/]`, false)
+	.addField('Bot website', `https://docs.invitemanager.co/[https://docs.invitemanager.co/]`, false)
+    	.addField('Bot website', `https://www.patreon.com/invitemanager[https://www.patreon.com/invitemanager]`, false)
 	.setTimestamp()
-	.setFooter(`${client.user.username} v0.0.3`, client.user.avatarURL);
+	.setFooter(`${client.user.username}`, client.user.avatarURL);
     message.channel.send(botInfo);
   }
   if(command === "help" || command === "cmd" || command === "cmds") {
