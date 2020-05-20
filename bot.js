@@ -72,7 +72,7 @@ client.on('guildMemberAdd', member => {
     // Get the log channel (change to your liking)
     const logChannel = member.guild.channels.find(channel => channel.name === "welcome");
     // A real basic message with the information we need. 
-    logChannel.send(`${member.user.tag} joined using invite code ${invite.code} from ${inviter.tag}. Invite was used ${invite.uses} times since its creation.`);
+    logChannel.send(`<@${member.user.id}> joined; Invited by **${inviter.username}** ( **${invite.uses}** invites)`);
   });
 });
 //client.login(token);
