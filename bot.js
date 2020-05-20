@@ -52,23 +52,6 @@ client.on("message", async message => {
 	.setFooter(`${client.user.username}`, client.user.avatarURL);
     message.channel.send(botInfo);
   }
-  if(command === "help" || command === "cmd" || command === "cmds") {
-    const botHelp = new RichEmbed()
-	.setAuthor(client.user.username + " commands", client.user.avatarURL)
-	.setColor("#000000")
-	.setThumbnail(client.user.displayAvatarURL)
-        .addField(`**${prefix}countdown**`, `**Description:** Death? There's an app for that.\n**Alias:** ${prefix}time, ${prefix}timeleft, ${prefix}tl, ${prefix}cd`)
-        .addField(`**${prefix}botinfo**`, `**Description:** Show bot informations.\n**Alias:** ${prefix}info`)
-        .addField(`**${prefix}ping**`, `**Description:** Show bot ping.\n**Alias:** None`)
-	.setTimestamp()
-	.setFooter(`Bot prefix is ${prefix}`, client.user.avatarURL);
-	if(message.member.hasPermission(["MANAGE_MESSAGES", "ADMINISTRATOR"])) {
-		botHelp.addField(`**${prefix}say**`, `**Description:** Say something through the bot.\n**Usage:** ${prefix}say #channel \n**Alias:** ${prefix}ann`)
-		botHelp.addField(`**${prefix}purge**`, `**Description:** Delete some messages from channels.\n**Usage:** ${prefix}purge number_of_messages \n**Alias:** ${prefix}clear`)
-	}
-    message.channel.send(botHelp);
-  }
-});
 
 client.on('guildMemberAdd', member => {
   // To compare, we need to load the current invite list.
