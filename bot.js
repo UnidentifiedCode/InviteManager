@@ -52,7 +52,7 @@ client.on("message", async message => {
 	.setFooter(`${client.user.username}`, client.user.avatarURL);
     message.channel.send(botInfo);
   }
-
+});
 client.on('guildMemberAdd', member => {
   // To compare, we need to load the current invite list.
   member.guild.fetchInvites().then(guildInvites => {
