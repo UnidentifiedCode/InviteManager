@@ -23,7 +23,19 @@ client.on("message", async message => {
   if(message.content.indexOf(prefix) !== 0) return;
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  
+  if(command === "help"){
+    const botInfo = new RichEmbed()
+	.setDescription("This is a list of commands you can use. You can get more info about a specific command by using `!help <command>` (e.g. `!help add-ranks`)")
+	.setColor("#129C4F")
+	.addField("Invites", "`addInvites`, `clearInvites`, `createInvite`, `info`", false)
+	.addField("Ranks", "`addRank`, `fixRanks`, `ranks`, `removeRank`", false)
+	.addField("Config", "`botConfig`, `config`", false)
+	.addField("Info", "`botInfo`, `credits`, `interactiveConfig`, `inviteCodeConfig`, `memberConfig`, `permissions`", false)
+	.addField("Premium", "`export`, `premium`, `tryPremium`", false)
+	.setTimestamp()
+	.setFooter(`${client.user.username}`, client.user.avatarURL);
+    message.channel.send(botInfo);
+  }
   if(command === "botinfo" || command === "info"){
     const botInfo = new RichEmbed()
 	.setAuthor(client.user.username + "info", client.user.avatarURL)
