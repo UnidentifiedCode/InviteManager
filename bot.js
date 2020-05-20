@@ -5,8 +5,8 @@ const client = new Client({disableEveryone: true});
 
 
 client.on("ready", () => {
-  client.user.setActivity(`.timeleft of ${client.users.size} users`, { type: "WATCHING" });
-  client.user.setStatus("dnd");
+  client.user.setActivity(`docs.invitemanager.co!`, { type: "PLAYING" });
+  client.user.setStatus("online");
   console.log("Invites are ready...");
 });
 
