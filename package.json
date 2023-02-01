@@ -8,6 +8,6 @@
   "dependencies": {
     "discord.js": "^11.3.2",
     "moment": "^2.24.0",
-    "mongoose": "^5.9.0"
+    "mongoose": "^5.13.15"
   }
 }
